@@ -68,7 +68,7 @@ class GradlePlugin implements Plugin<Project> {
                     throw new ProjectConfigurationException("Plugin requires 'APK Signature Scheme v2 Enabled' for ${variant.name}.", null);
                 }
 
-                ChannelMaker channelMaker = project.tasks.create("assemble${variantName}Channels", ChannelMaker);
+                ChannelMaker channelMaker = project.tasks.create("assembleChannels${variantName}Channels", ChannelMaker);
                 channelMaker.targetProject = project;
                 channelMaker.variant = variant;
                 channelMaker.setup();
